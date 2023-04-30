@@ -44,9 +44,20 @@ moveButton.addEventListener('click', function() {
   const firstChild = first.querySelector('li:first-child');
   second.querySelector('ul').appendChild(firstChild);
   });
-// Q.2 #first 의 ul 태그의 자식들이(li태그)가 모두 second로 이동했다면, -> ok! 
+// Q.2 #first 의 ul 태그의 자식들이(li태그)가 모두 second로 이동했다면, -> ok!
 // Q.3 모든 #root 태그의 모든 자식을 삭제 하여 사실상 백지화를 시키세요.
+//???? 태그삭제하기  
+ele = document.getElementById('root');
+oriText = ele.innerHTML; 
+oriText = '<div id="first"><ul><li>first-1</li><li>first-2</li><li>first-3</li></ul></div><div id="second"><ul><li>second-1</li><li>second-2</li><li>second-3</li></ul></div>';
+newText = oriText.replace(/(<([^>]+)>)/ig,"");
+console.log(newText);
+
 // Q.4 1초뒤에 "hello!" 라는 문구가 나타나게 하세요.
+setTimeout (()=>{
+alert("hello!")
+},1000);
+
 </script>
 </body>
 </html>
